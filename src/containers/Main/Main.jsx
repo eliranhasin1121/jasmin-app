@@ -1,12 +1,16 @@
-import React from 'react';
+import React , {useRef} from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
-// import { Card, Button } from 'antd';
-// import { Icon } from '@ant-design/compatible';
-import { MainWrapper } from './Main.styled';
 import { changeLanguage, getActiveLanguage } from '../../config/translations/utils';
-import { Text, FlexDivCenter } from '../../components/Typography/Typography';
 import { loginAction } from '../../data/modules/auth/auth.actions';
+import Home from '../../components/Home';
+import About from '../../components/About';
+import Team from '../../components/Team';
+import Contact from '../../components/Contact';
+import Footer from '../../components/Footer';
+// import BurgerMenu from '../../components/BurgerMenu';
+import useMedia from '../../customHooks/UseMedia'
+
 
 export default () => {
   const dispatch = useDispatch();
@@ -27,16 +31,37 @@ export default () => {
     }
   }
 
+  const {isDevice} = useMedia();
+
   return (
-    <MainWrapper>
-      {activeUser && <Text size="xxxlarge">{t('welcome', { name: activeUser.displayName })}</Text>}
-      {/* <Card> */}
-      <FlexDivCenter>
-        <Text size="title">{t('welcome_to_webo_app')}</Text>
-        <Button margin="5px" onClick={onToggleLanguage}>{t('change_language')} <Icon inButton type="thunderbolt" /></Button>
-        <Button margin="5px" onClick={onLogin}>{t('login')} <Icon inButton type="login" /></Button>
-      </FlexDivCenter>
-      {/* </Card> */}
-    </MainWrapper>
+      <div id="page-wrapper">
+       {/* {isDevice && <BurgerMenu/> } */}
+				<section id='home'>
+					<Home/>
+				</section>
+        
+				<section id="main">
+					<div className="row gtr-200">
+						<div id="about" className="col-12">
+              <About/>
+						</div>
+						<div id="team" className="col-12">
+							<h2 className="our-team-header">הצוות שלנו</h2>
+								<Team/>
+							</div>
+						</div>
+				</section>
+
+        <section id="Contact">
+					<div className="row gtr-200">
+						<div id="contact" className="col-12">
+              <Contact/>
+						</div>
+          </div>
+				</section>
+        <Footer/>
+		</div>
+
+
   );
 };

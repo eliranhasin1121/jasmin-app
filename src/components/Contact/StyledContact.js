@@ -10,6 +10,25 @@ export const StyledContactForm = Styled.div`
     `}
     background-color: #D8D8D8;
     direction: rtl;
+
+    @media (max-width: 759px) {
+       margin-top: 40px;
+    }
+    @media (max-width: 737px) {
+        margin-top: -9px;
+    }
+    @media (max-width: 632px) {
+        margin-top: 20px;
+    }
+    @media (max-width: 382px) {
+        margin-top: 60px;
+    }
+    @media (max-width: 360px) {
+        margin-top: -7px;
+    }
+    @media (max-width: 349px) {
+        margin-top: 25px;
+    }
 `
 
 export const StyledForm = Styled.form`
@@ -42,35 +61,27 @@ position: absolute;
 `
 
 export const ContactContainer = Styled.div`
-  position:relative;
-    color:white;
+    padding: 0px;
 
+`
+
+export const StyledContactImage = Styled.img`
+    margin: 0px !important;
+    max-height: ${props => props.isMobile ? '400px' : '500px'};
 `
 
 export const ButtonWrapper = Styled.div`
-padding-top:20px;
-display: flex;
-justify-content: center;
+    padding-top:20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom : ${props=>props.isDevice ? '25px' : '0px'};
 `
 export const Button = Styled.button`
-background:transparent;
-width:144px;
-height:46px;
-border:1px solid #979797;
-color:black;
-font-size:18px;
-border-radius:8px;
-`
-
-export const TextContainer = Styled.div``
-
-export const ContactTexts = Styled.div`
-
-padding: 40px 40px 0px 40px;
-`
-
-export const TextContact = Styled.p`
-margin-bottom: 1rem !important;
-padding-left:20px;
-font-size:12px !important;
+    background:transparent;
+    width:144px;
+    height:46px;
+    border:1px solid #979797;
+    color:black;
+    font-size:18px;
+    border-radius:8px;
 `

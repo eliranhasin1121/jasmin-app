@@ -2383,7 +2383,7 @@ input, select, textarea {
 				text-decoration: none;
 				color: #F28A9C;
 				top: -6px;
-                padding: 1.5em 1.5em 0.25em 1.5em;
+                padding: 1em 1.5em 0.25em 1.5em;
 				border-bottom-left-radius: 6px;
 				border-bottom-right-radius: 6px;
 				outline: 0;
@@ -2395,8 +2395,7 @@ input, select, textarea {
 			}
 
 			#nav li:hover a, #nav li:hover span {
-				background: #C1CAC5;
-				color: #fff;
+			    font-weight: 800;
 			}
 
 			#nav li.active a, #nav li.active span {
@@ -2690,14 +2689,14 @@ input, select, textarea {
 		display: none;
 	}
 
+	.web-nav-bar{
+        background-color: #323338;
+    }
+
 
 	@media screen and (max-width: 980px) {
 
-		/* Basic */
 
-			html, body {
-				overflow-x: hidden;
-			}
 
 		/* Box */
 
@@ -3054,12 +3053,6 @@ input, select, textarea {
 					#banner .content p {
 						font-size: 1.25em;
 					}
-
-		/* Main */
-
-			#main {
-				padding: 3em 0;
-			}
 
 		/* Sidebar */
 

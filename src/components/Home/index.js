@@ -8,11 +8,11 @@ const Home = () => {
     return (
         <div>
 				<nav className="web-nav-bar" id="nav">
-                    <StyledPiNovelIcon src={JasmineLogo}></StyledPiNovelIcon>
+                    <StyledPiNovelIcon tabIndex="0" aria-label='קריפטו מעולם לא היה כל כך נגיש' src={JasmineLogo}></StyledPiNovelIcon>
 					<ul>
-                        <li><Link to="about" spy={true} smooth={true}>צור קשר</Link></li>
-                        <li><Link to="team" spy={true} smooth={true}>צוות</Link></li>
-                        <li><Link to="contact" spy={true} smooth={true}>ראשי</Link></li>
+                        <li aria-label='ראשי' tabIndex="0"><Link to="contact" spy={true} smooth={true}>צור קשר</Link></li>
+                        <li aria-label='צוות' tabIndex="0"><Link to="team" spy={true} smooth={true}>צוות</Link></li>
+                        <li aria-label='צור קשר' tabIndex="0"><Link to="about" spy={true} smooth={true}>ראשי</Link></li>
 					</ul>
 				</nav>
 

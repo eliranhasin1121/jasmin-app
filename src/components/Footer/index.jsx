@@ -9,6 +9,7 @@ export default function Footer(){
     const {isMobile} = useMedia();
 
     return(
+		<React.Fragment>
         <FooterContainer>
 		 <FooterContentContainer className="row">
 
@@ -48,6 +49,14 @@ export default function Footer(){
     }
     </FooterContentContainer>
 	  </FooterContainer>
+
+		<FooterText>
+			<span>
+			המידע באתר אינו מהווה הצעה להשקעה בקרן או הזמנה לקבלת הצעות להשקעה בקרן, אינו מהווה בסיס לקבלת החלטות השקעה, ואינו מהווה המלצה ו/או חוות דעת ואינו תחליף לשיקול דעת של משקיע פוטנציאלי. כמו כן האמור כאן אינו מהווה תחליף לייעוץ מקצועי בידי בעל רישיון המתחשב בצרכי הלקוח וכן אינו מהווה תחליף לייעוץ מס. האמור באתר זה אינו מהווה הצעה של ניירות ערך. ניירות הערך של הקרנות השונות אינם רשומים ולא ירשמו למסחר והם מוצעים למשקיעים בדרך של הצעה פרטית למספר מוגבל של ניצעים כקבוע בחוק ני"ע. התקשרות בהסכם השקעה הינה לפי שיקול דעתו המוחלט של השותף הכללי.
+			</span>
+		</FooterText>
+</React.Fragment>
+
     )
 }
 
@@ -78,6 +87,13 @@ const Logo = styled.img`
 width:42px;
 height:67px;
 margin-bottom: 0px !important
+`
+
+const FooterText = styled.p`
+	direction: rtl;
+    background: rgb(216, 216, 216);
+    padding: 25px;
+	margin-bottom : 0px;
 `
 
 

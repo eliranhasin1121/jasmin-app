@@ -8,7 +8,7 @@ import About from '../../components/About';
 import Team from '../../components/Team';
 import Contact from '../../components/Contact';
 import Footer from '../../components/Footer';
-// import BurgerMenu from '../../components/BurgerMenu';
+import BurgerMenu from '../../components/BurgerMenu';
 import useMedia from '../../customHooks/UseMedia'
 
 
@@ -35,7 +35,7 @@ export default () => {
 
   return (
       <div id="page-wrapper">
-       {/* {isDevice && <BurgerMenu/> } */}
+       {isDevice && <BurgerMenu/> }
 				<section id='home'>
 					<Home/>
 				</section>

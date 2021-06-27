@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "jasmin-app"
+    "default": "jasmin-app",
+    "jasmin-app": "jasmin-app"
   }
 }

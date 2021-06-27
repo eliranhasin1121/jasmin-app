@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import footerLogo from '../../assets/footer-logo.png';
+import JasmineLogo from '../../assets/JasmineLogo.png'
 import useMedia from '../../customHooks/UseMedia';
 import { Link } from 'react-scroll'
 
@@ -15,33 +16,33 @@ export default function Footer(){
 
 		 {!isMobile ? ( 
              <>
-          <LinkItemWrapper style={{margin: '15px 0px 0px 35px'}} className="col-2-small">
-		    <Logo className="image featured"  src={footerLogo}/>
+          <LinkItemWrapper style={{margin: '-15px 0px 0px 35px'}} className="col-1-small">
+		    <Logo className="image featured"  src={JasmineLogo}/>
 		  </LinkItemWrapper>
 		  <LinkItemWrapper className="col-3">
-		    <Text as={'span'}>©PI FUNDS | POWERED BY NERAFOX</Text>
+		    <Text as={'span'}>©Jasmin | POWERED BY NERAFOX</Text>
 		  </LinkItemWrapper>
 		   <LinkItemWrapper className="col-1">
-		  <Text><Link to="home" spy={true} smooth={true}>HOME</Link></Text>
+		  <Text><Link to="contact" spy={true} smooth={true}>צור קשר</Link></Text>
 		 </LinkItemWrapper>
 		 <LinkItemWrapper className="col-1">
-		 <Text><Link to="about" spy={true} smooth={true}>ABOUT</Link></Text>
+		 <Text><Link to="team" spy={true} smooth={true}>צוות</Link></Text>
 		</LinkItemWrapper>
 		<LinkItemWrapper className="col-1">
-		<Text><Link to="team" spy={true} smooth={true}>TEAM</Link></Text>
+		<Text><Link to="home" spy={true} smooth={true}>ראשי</Link></Text>
 	   </LinkItemWrapper>
-	  <LinkItemWrapper className="col-3">
-	    <Text as={'span'} >TERMS OF USE | ACCESSIBILITY | A   A   A</Text> 
+	  <LinkItemWrapper className="col-2">
+	    <Text as={'span'} > א   א  א   |   נגישות</Text> 
 	  </LinkItemWrapper>
+	  <LinkItemWrapper style={{margin: '0px 0px 0px 35px'}} className="col-2-small">
+		    <Logo className="image featured"  src={footerLogo}/>
+		  </LinkItemWrapper>
       </>
       ) : 
       (
     <>
-    <LinkItemWrapper  className="col-2">
-    <Logo className="image featured" src={footerLogo}/>
-    </LinkItemWrapper>
-    <LinkItemWrapper  className="col-10">
-        <Text as={'span'}>©PI FUNDS | POWERED BY NERAFOX</Text>
+    <LinkItemWrapper  className="col-12">
+	<Text as={'span'}>©Jasmin | POWERED BY NERAFOX</Text>
     </LinkItemWrapper>
     </>
       )

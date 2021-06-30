@@ -3,28 +3,28 @@ import GalitLogo from '../../assets/Galit.png'
 import TaliLogo from '../../assets/Tali.png'
 import AhronLogo from '../../assets/Ahron.png'
 import Jonatan from '../../assets/Jonatan.png'
-import { StyledOutTeamText , StyledOutTeamImage , StyledTeamMemberContainer , StyledTextContainer} from './StyledTeam';
+import { StyledOutTeamText , StyledOutTeamImage , StyledTeamMemberContainer , StyledTextContainer , StyledTeamName} from './StyledTeam';
 import useMedia from '../../customHooks/UseMedia';
 const Team = () =>{
     const {isMobile , isDevice} = useMedia();
     return (
         <div>
             <section>
-                <div className="row">
-                    <StyledTeamMemberContainer className="col-6 col-6-medium">
+                <div className="row teamImageContiner">
+                    <StyledTeamMemberContainer className="col-6 col-6-medium teamImageContiner">
                     {isDevice &&  
                         <StyledOutTeamText isDevice={isDevice}>
-                            <span tabIndex="0">גלית ברודו</span>
+                            <StyledTeamName tabIndex="0">גלית ברודו</StyledTeamName>
                             <span tabIndex="0">מנכ״ל</span>   
                         </StyledOutTeamText>                    
                     }
-                    <StyledOutTeamImage isMobile={isMobile} className="image featured" src={GalitLogo}></StyledOutTeamImage>
+                    <StyledOutTeamImage isMobile={isMobile} className="image featured mid" src={GalitLogo}></StyledOutTeamImage>
                     </StyledTeamMemberContainer>
                     <StyledTextContainer className="col-6 col-12-medium">
                         <StyledOutTeamText isDevice={isDevice}>
                         {!isDevice && 
                             <React.Fragment>
-                                <span tabIndex="0">גלית ברודו</span>
+                                <StyledTeamName tabIndex="0">גלית ברודו</StyledTeamName>
                                 <span tabIndex="0">מנכ״ל</span>
                             </React.Fragment>
                         }
@@ -35,26 +35,26 @@ const Team = () =>{
             </section>
 
             <section>
-                <div className="row">
+                <div className="row teamImageContiner">
                         {!isDevice && 
                         <StyledTextContainer className="col-6 col-12-medium">
                             <StyledOutTeamText isDevice={isDevice}>
                                 <React.Fragment>
-                                    <span tabIndex="0">טלי ארקין</span>
+                                    <StyledTeamName tabIndex="0">טלי ארקין</StyledTeamName>
                                     <span tabIndex="0">קשרי לקוחות</span>
                                 </React.Fragment>
                                 <span tabIndex="0">בעל ניסיון של 15 שנה בשוק ההון, בתפקידים שונים ומגוונים: ברוקר בישיר בית השקעות, מנהל השקעות במנורה, מנהל השקעות נוסטרו/קרן גידור של יורוקום, מנהל מחלקת הנוסטרו של איביאי ונוסטרו בענבר פיננסים.</span>
                             </StyledOutTeamText>
                         </StyledTextContainer>
                         }
-                    <StyledTeamMemberContainer className="col-6 col-6-medium">
+                    <StyledTeamMemberContainer className="col-6 col-6-medium teamImageContiner">
                     {isDevice &&  
                         <StyledOutTeamText isDevice={isDevice}>
-                            <span tabIndex="0">טלי ארקין</span>
+                            <StyledTeamName tabIndex="0">טלי ארקין</StyledTeamName>
                             <span tabIndex="0">קשרי לקוחות</span>   
                         </StyledOutTeamText>                    
                     }
-                    <StyledOutTeamImage isMobile={isMobile} className="image featured" src={TaliLogo}></StyledOutTeamImage>
+                    <StyledOutTeamImage isMobile={isMobile} className="image featured mid" src={TaliLogo}></StyledOutTeamImage>
                     </StyledTeamMemberContainer>
 
                     {isDevice && 
@@ -69,21 +69,21 @@ const Team = () =>{
             </section>
 
             <section>
-                <div className="row">
-                    <StyledTeamMemberContainer className="col-6 col-6-medium">
+                <div className="row teamImageContiner">
+                    <StyledTeamMemberContainer className="col-6 col-6-medium teamImageContiner">
                     {isDevice &&  
                         <StyledOutTeamText isDevice={isDevice}>
-                            <span tabIndex="0">אהרן כהן</span>
+                            <StyledTeamName tabIndex="0">אהרן כהן</StyledTeamName>
                             <span tabIndex="0">שותף מייסד</span>   
                         </StyledOutTeamText>                    
                     }
-                    <StyledOutTeamImage isMobile={isMobile} className="image featured" src={AhronLogo}></StyledOutTeamImage>
+                    <StyledOutTeamImage isMobile={isMobile} className="image featured mid" src={AhronLogo}></StyledOutTeamImage>
                     </StyledTeamMemberContainer>
                     <StyledTextContainer className="col-6 col-12-medium">
                         <StyledOutTeamText isDevice={isDevice}>
                         {!isDevice && 
                             <React.Fragment>
-                                <span tabIndex="0">אהרן כהן</span>
+                                <StyledTeamName tabIndex="0">אהרן כהן</StyledTeamName>
                                 <span tabIndex="0">שותף מייסד</span>
                             </React.Fragment>
                         }
@@ -94,12 +94,12 @@ const Team = () =>{
             </section>
 
             <section>
-                <div className="row">
+                <div className="row teamImageContiner">
                         {!isDevice && 
                         <StyledTextContainer className="col-6 col-12-medium">
                             <StyledOutTeamText isDevice={isDevice}>
                                 <React.Fragment>
-                                    <span tabIndex="0">יהונתן קיי</span>
+                                    <StyledTeamName tabIndex="0">יהונתן קיי</StyledTeamName>
                                     <span tabIndex="0">שותף מייסד</span>
                                 </React.Fragment>
                                <span tabIndex="0">
@@ -109,14 +109,14 @@ const Team = () =>{
                             </StyledOutTeamText>
                         </StyledTextContainer>
                         }
-                    <StyledTeamMemberContainer className="col-6 col-6-medium">
+                    <StyledTeamMemberContainer className="col-6 col-6-medium teamImageContiner">
                     {isDevice &&  
                         <StyledOutTeamText isDevice={isDevice}>
-                            <span tabIndex="0">יהונתן קיי</span>
+                            <StyledTeamName tabIndex="0">יהונתן קיי</StyledTeamName>
                             <span tabIndex="0">שותף מייסד</span>
                         </StyledOutTeamText>                    
                     }
-                    <StyledOutTeamImage isMobile={isMobile} className="image featured" src={Jonatan}></StyledOutTeamImage>
+                    <StyledOutTeamImage isMobile={isMobile} className="image featured mid" src={Jonatan}></StyledOutTeamImage>
                     </StyledTeamMemberContainer>
 
                     {isDevice && 

@@ -18,25 +18,25 @@ const Contact = () =>{
                         <StyledFormHeader tabIndex="0" style={{padding:0}}>{'צור קשר'}</StyledFormHeader>
                         <StyledForm>
                             <Input
-                                style={{border:'none',borderBottom:'2px solid black',background:'transparent',borderRadius:0}}
+                                style={{border:'none',borderBottom:'1px solid black',background:'transparent',borderRadius:0}}
                                 type="text" 
                                 name="שם מלא" 
                                 placeholder={"שם מלא"} />
                             
                             <Input 
-                                style={{border:'none',borderBottom:'2px solid black',background:'transparent',borderRadius:0}}
+                                style={{border:'none',borderBottom:'1px solid black',background:'transparent',borderRadius:0}}
                                 type="email" 
                                 name="דואר אלקטרוני" 
                                 placeholder={"דואר אלקטרוני"} />
                             
                             <Input
-                                style={{border:'none',borderBottom:'2px solid black',background:'transparent',borderRadius:0}} 
+                                style={{border:'none',borderBottom:'1px solid black',background:'transparent',borderRadius:0}} 
                                 type="text" 
                                 name="מספר פלאפון" 
                                 placeholder={"מספר פלאפון"} />
                             
                             <Input 
-                            style={{border:'none',borderBottom:'2px solid black',background:'transparent',borderRadius:0}}
+                            style={{border:'none',borderBottom:'1px solid black',background:'transparent',borderRadius:0}}
                             type="text" 
                             name="הודעה" 
                             placeholder={"הודעה"} />

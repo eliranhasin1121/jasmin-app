@@ -22,3 +22,7 @@ export const StyledTeamMemberContainer = Styled.div`
 export const StyledTextContainer = Styled.div`
     padding-top: 0px;
 `
+
+export const StyledTeamName = Styled.span`
+    font-weight: bold;
+`

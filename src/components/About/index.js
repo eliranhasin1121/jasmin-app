@@ -34,7 +34,7 @@ const About = () => {
             </Link>
 
             <section>
-                <div className="row">
+                <div className="row grayBackground">
                     <StyledAboutTextSection className="col-6 col-12-medium">
                                 <StyledAboutText>
                                 <h3 tabIndex="0">מי אנחנו ?</h3>

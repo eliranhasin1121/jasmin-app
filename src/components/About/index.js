@@ -2,11 +2,13 @@ import React from 'react';
 import AboutIcon from '../../assets/About.png'
 import scrollDownButton from '../../assets/scrollDownButton.png';
 import { StyledAboutImgSection , StyledAboutTextSection , StyledAboutText ,
-     StyledScrolArrowContiner ,StyledScrolArrow , StyledPhilosophyText } from './StyledAbout';
+     StyledScrolArrowContiner ,StyledScrolArrow , StyledPhilosophyText , StyledPhilosophyImg} from './StyledAbout';
 import { Link } from 'react-scroll'
 import PhilosophyIMG from '../../assets/PhilosophyIMG.png';
-
+import UseMedia from '../../customHooks/UseMedia';
+import PhilosophyWeb from '../../assets/PhilosophyWeb.png';
 const About = () => {
+    const {isDevice} = UseMedia();
 
     return (
         <div>
@@ -34,6 +36,7 @@ const About = () => {
             </Link>
 
             <section>
+            {isDevice ? 
                 <div className="row grayBackground">
                     <StyledAboutTextSection className="col-6 col-12-medium">
                                 <StyledAboutText>
@@ -47,9 +50,17 @@ const About = () => {
                             </StyledAboutTextSection>
 
                             <StyledAboutImgSection className="col-6 col-12-medium">
-                                <img className="image featured" src={PhilosophyIMG}></img>
+                                <StyledPhilosophyImg className="image featured" src={PhilosophyIMG}></StyledPhilosophyImg>
                             </StyledAboutImgSection>
                 </div>
+                :
+                <div className="row" style={{display : 'block'}}>
+                <StyledAboutImgSection className="col1-12">
+                    <img className="image featured" src={PhilosophyWeb} tabIndex={0} 
+                    aria-label={' מי אנחנו ? יסמין טכנולוגיות מקבוצת פאי, הינה מנפיקה של תעודת התחייבות בש״ח הראשונות מסוגן , העוקבת אחר טבעות קריפטוגרפיים , למשקיעים מוסדיים וכשירים. התעודות עקבות אחר שער הביטקויין יסמין ביטקויין יסמין איתריום האחזקה בתעודה מאפשרת השקעה במטבעות קריפטוגרפיים ללא אחזרה ישירה במטבעות עצמם התעודות נהנות מנזילות יומית אפשרות לפדיון מול המנפיקה ורמת אבטחה גבוהה עמידה בכלל הכללים קבוצת פאי בעלות הרהון כהן ויונתן גוני קיי הקבוצה עוסקת בהפנקת מכשירים פיננסים קרנות גידור מיזוגים ורכישות והשקעות בחזרנות הזנק מסחר בנגזרות '}/>
+                </StyledAboutImgSection>
+            </div>
+            }
             </section>
         </div>
     )

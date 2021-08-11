@@ -48,11 +48,11 @@ export default function Footer({history}){
       ) : 
       (
     <>
-    <LinkItemWrapper  className="col-2">
+    {/* <LinkItemWrapper  className="col-2">
     <Logo className="image featured" src={footerLogo}/>
-    </LinkItemWrapper>
-    <LinkItemWrapper  className="col-10">
-        <Text as={'span'}>©PI FUNDS | POWERED BY NERAFOX</Text>
+    </LinkItemWrapper> */}
+    <LinkItemWrapper style={{width : '100%' , marginBottom : '10px'}} className="col-10">
+        <Text as={'span'}>©JUSMIN | POWERED BY NERAFOX</Text>
     </LinkItemWrapper>
     </>
       )

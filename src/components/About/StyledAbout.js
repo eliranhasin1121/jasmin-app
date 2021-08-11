@@ -35,7 +35,6 @@ export const StyledScrolArrowContiner = styled.div`
     flex-direction: column;
     align-items: center;
     span{
-        color: #6b7770;
         text-decoration: none;
     }
 
@@ -45,9 +44,16 @@ export const StyledScrolArrow = styled.img`
     height: 60px;
     width: 60px !important;
     z-index: 1;
+    @media (max-width: 740px) {
+        margin-bottom: -5px !important;
+    }
+    @media (max-width: 400px) {
+        margin-bottom: -10px !important;
+    }
+    
 `
 
 export const StyledPhilosophyImg = styled.img`
     position: relative;
-    top: 28px;
+    top: -50px;
 `
